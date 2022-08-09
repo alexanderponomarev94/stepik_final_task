@@ -20,6 +20,7 @@ class LoginPage(BasePage):
         # проверка, что есть форма регистрации на странице
         assert self.is_element_present(*LoginPageLocators.REGISTER_FORM), "Register form is not presented"
 
+    # регистрация нового пользователя
     def register_new_user(self, email, password):
         input_email = self.browser.find_element(*LoginPageLocators.REGISTRATION_EMAIL)
         input_email.send_keys(email)
@@ -30,4 +31,4 @@ class LoginPage(BasePage):
         button = self.browser.find_element(*LoginPageLocators.REGISTRATION_BUTTON)
         button.click()
 
-# последняя строка
+# last string

@@ -26,8 +26,4 @@ class TestLoginFromMainPage():
         # Ожидаем, что есть текст о том что корзина пуста 
         page_basket.should_not_be_product_in_basket()
     
-
-
-
-
-# last string
+#last string

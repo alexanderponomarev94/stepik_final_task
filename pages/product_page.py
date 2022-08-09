@@ -26,12 +26,11 @@ class ProductPage(BasePage):
         assert product_price == message_price, "Bascet price does not match the price of the product"
 
     def should_not_be_success_message(self):
+        # проверка отсутствия на странице сообщения об успешном добавлении продукта
         assert self.is_not_element_present(*ProductPageLocators.MESSAGE_ABOUT_ADD_PRODUCT), "Success message is presented, but should not be"
 
     def should_be_success_message_is_disappeared(self):
+        # проверка о том что сообщения об успешном добавлении продукта пропало со страницы
         assert self.is_disappeared(*ProductPageLocators.MESSAGE_ABOUT_ADD_PRODUCT), "Success message is not disappeared, but should be"
 
-
-
-
-# метод добавления продукта в корзину
+# last string
